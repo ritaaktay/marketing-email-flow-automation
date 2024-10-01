@@ -10,7 +10,7 @@
             "body": "Need some socks?"
           },
           "sequence": 1,
-          "delay": 0
+          "delay": 120
         }
       ]
     },

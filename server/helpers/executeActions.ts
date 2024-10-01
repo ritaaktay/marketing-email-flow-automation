@@ -21,11 +21,16 @@ export const executeActions = (steps: Steps, event: Event): Promise<void> => {
       const executor = executors[step.action.type];
 
       if (!executor) {
-        reject("Action does not have an executor function defined");
+        reject(
+          `Action does not have an executor function defined:  ${JSON.stringify(
+            step.action
+          )}`
+        );
       }
 
       try {
-        await executor(event, step.action);
+        const completed = await executor(event, step.action);
+        console.log(completed);
       } catch (e) {
         // In case of an error executing an action, we will just stop all exectuion flow,
         // assuming actions are conditional on preceding actions.
