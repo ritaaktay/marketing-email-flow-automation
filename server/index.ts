@@ -4,7 +4,7 @@ import eventRouter from "./routers/eventRouter.ts";
 
 const app = express();
 
-// all HTTP requests to /event will be handled by the eventRouter
+// all HTTP requests to /event endpoint will be handled by the eventRouter
 app.use("/event", eventRouter);
 
 const port = "8000";

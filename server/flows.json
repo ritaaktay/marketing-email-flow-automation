@@ -1,0 +1,35 @@
+{
+  "flows": [
+    {
+      "trigger": "websiteSignup",
+      "actions": [
+        {
+          "type": "unknown",
+          "sequence": 1,
+          "delay": 0,
+          "subject": "Welcome!",
+          "body": "Need some socks?"
+        }
+      ]
+    },
+    {
+      "trigger": "socksPurchased",
+      "actions": [
+        {
+          "type": "email",
+          "sequence": 1,
+          "delay": 1,
+          "subject": "Payment received",
+          "body": "Thank you!"
+        },
+        {
+          "type": "email",
+          "sequence": 2,
+          "delay": 0,
+          "subject": "Socks dispatched!",
+          "body": "Get ready! "
+        }
+      ]
+    }
+  ]
+}

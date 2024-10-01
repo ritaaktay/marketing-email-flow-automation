@@ -7,7 +7,7 @@
   "license": "MIT",
   "scripts": {
     "start": "tsx server/index.js",
-    "start:dev": "tsx watch server/index.js"
+    "start:watch": "tsx watch server/index.js"
   },
   "dependencies": {
     "body-parser": "^1.20.3",
