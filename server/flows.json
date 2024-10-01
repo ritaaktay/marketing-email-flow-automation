@@ -2,32 +2,38 @@
   "flows": [
     {
       "trigger": "websiteSignup",
-      "actions": [
+      "steps": [
         {
-          "type": "unknown",
+          "action": {
+            "type": "email",
+            "subject": "Welcome!",
+            "body": "Need some socks?"
+          },
           "sequence": 1,
-          "delay": 0,
-          "subject": "Welcome!",
-          "body": "Need some socks?"
+          "delay": 0
         }
       ]
     },
     {
       "trigger": "socksPurchased",
-      "actions": [
+      "steps": [
         {
-          "type": "email",
+          "action": {
+            "type": "email",
+            "subject": "Payment received",
+            "body": "Thank you!"
+          },
           "sequence": 1,
-          "delay": 1,
-          "subject": "Payment received",
-          "body": "Thank you!"
+          "delay": 0
         },
         {
-          "type": "email",
+          "action": {
+            "type": "email",
+            "subject": "Socks dispatched!",
+            "body": "Get ready! "
+          },
           "sequence": 2,
-          "delay": 0,
-          "subject": "Socks dispatched!",
-          "body": "Get ready! "
+          "delay": 0
         }
       ]
     }
