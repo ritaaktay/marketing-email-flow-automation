@@ -30,6 +30,8 @@ The Express application uses a router to handle all requests to `marketing/flows
 
 The flow router finds a `flow` with a `trigger` matching the event name in the request body and executes it.
 
+`flow`s are stored in a JSON file on disk, and can later be moved into an external document database with an API for CRUD operations for easy updates.
+
 Flow execution is done via a recursive function, which will set a timer for the execution of each `step` once the previous one has been resolved.
 
 Each `step` defines the `delay` preceding it (so they can be chained) and a `sequence` to determine it's position in the flow. It also contains the `action` to be executed.

@@ -1,5 +1,5 @@
 import { Router } from "express";
-import { flows } from "../flows.json";
+import { flows } from "../flows/flows.json";
 import { executeSteps } from "../utils/executeSteps.ts";
 import { isEvent } from "../types.ts";
 
