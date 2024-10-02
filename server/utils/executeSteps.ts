@@ -26,7 +26,7 @@ export const executeSteps = (
 
       if (!executor) {
         const error = "Action does not have an executor";
-        reject(summariseResults(completed, error, action));
+        reject(new Error(summariseResults(completed, error, action)));
       }
 
       try {
@@ -36,7 +36,7 @@ export const executeSteps = (
         // In case of an error executing an action, we stop all exectuion flow,
         // assuming actions are conditional on the success of preceding actions.
         // Different error handling flows can be introduced here in the future.
-        reject(summariseResults(completed, String(e), action));
+        reject(new Error(summariseResults(completed, e, action)));
       }
 
       // If the first step has been executed successfully, we make a recursive call

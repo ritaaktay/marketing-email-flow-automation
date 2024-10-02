@@ -34,7 +34,9 @@ flowRouter.post("/", async (req, res) => {
       .status(200)
       .send(`🧦 Successfully executed flow for ${eventName}!\n${results}`);
   } catch (e) {
-    res.status(500).send(`🧦 Could not complete flow for ${eventName}\n${e}`);
+    res
+      .status(500)
+      .send(`🧦 Could not complete flow for ${eventName}\n${e.message}`);
   }
 });
 
