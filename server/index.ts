@@ -1,14 +1,17 @@
 import express from "express";
+import bodyParser from "body-parser";
 
-import eventRouter from "./routers/eventRouter.ts";
+import flowRouter from "./routers/flowRouter.ts";
 
 const app = express();
 
-// all HTTP requests to /event endpoint will be handled by the eventRouter
-app.use("/event", eventRouter);
+app.use("/", bodyParser.json());
+
+// all HTTP requests to /marketing/flows endpoint will be handled by the flowRouter
+app.use("/marketing/flows", flowRouter);
 
 app.use("*", (_req, res) => {
-  res.status(404).send("Cannot find the endpoing you are looking for");
+  res.status(404).send("Could not find what you are looking for");
 });
 
 const port = "8000";
