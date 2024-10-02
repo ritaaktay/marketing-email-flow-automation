@@ -5,9 +5,9 @@ import type { Event, Email } from "../types";
 // required email address
 export const sendEmail = async (
   event: Event,
-  email: Email
+  action: Email
 ): Promise<string> => {
-  const description = `${event.userEmail} with subject "${email.subject}"`;
+  const description = `${event.userEmail} with subject "${action.subject}"`;
 
   // Generate a random number between 0 and 1
   const randomNumber = Math.random();

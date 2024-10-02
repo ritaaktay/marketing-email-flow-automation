@@ -1,13 +1,7 @@
 {
   "compilerOptions": {
-    "lib": ["ES2022"],
     "esModuleInterop": true,
-    "allowJs": true,
-    "resolveJsonModule": true,
-    "moduleDetection": "force",
-    "isolatedModules": true,
-    "module": "preserve",
-    "noEmit": true
+    "resolveJsonModule": true
   },
   "include": ["server"]
 }

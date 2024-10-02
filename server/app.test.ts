@@ -10,7 +10,6 @@ describe("POST /marketing/flows", () => {
         eventName: "socksPurchased",
         userEmail: "pete@healthtech1.uk",
       });
-      // TODO - How to handle that is sometimes fails and sometimes succeeds?
       expect(response.statusCode).toBe(200);
     });
   });
