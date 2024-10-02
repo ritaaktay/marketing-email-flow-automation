@@ -6,13 +6,13 @@
 
 - Run `yarn install` at root to install all dependencies
 - Run `yarn start` to start the server listening on localhost:8000
-- Send a POST request to `localhost:8000/marketing/flows` with event data in the body.
+- Send a POST request to `localhost:8000/marketing/flows` with event data as JSON in the body.
   Try "socksPurchased" if you don't want to wait 2 hours!
 
   ```
   {
-    eventName: "socksPurchased"
-    userEmail: "pete@healthtech1.uk"
+    "eventName": "socksPurchased",
+    "userEmail": "pete@healthtech1.uk"
   }
   ```
 
