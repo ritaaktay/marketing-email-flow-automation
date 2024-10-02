@@ -4,18 +4,19 @@
 
 ## Get Started
 
-- run `yarn install` at root to install all dependencies
-- run `yarn start` to start the server listening on localhost:8000
-- send a POST request to `localhost:8000/marketing/flows` with event data in the body, ex:
+- Run `yarn install` at root to install all dependencies
+- Run `yarn start` to start the server listening on localhost:8000
+- Send a POST request to `localhost:8000/marketing/flows` with event data in the body.
+  Try "socksPurchased" if you don't want to wait 2 hours!
 
   ```
   {
-    eventName: "websiteSignup"
+    eventName: "socksPurchased"
     userEmail: "pete@healthtech1.uk"
   }
   ```
 
-- run `yarn test` to run tests
+- Run `yarn test` to run tests
 
 ## Concepts
 

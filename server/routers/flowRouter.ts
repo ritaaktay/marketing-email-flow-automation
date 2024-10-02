@@ -1,7 +1,7 @@
 import { Router } from "express";
 import { flows } from "../flows/flows.json";
-import { executeSteps } from "../utils/executeSteps.ts";
-import { isEvent } from "../types.ts";
+import { executeSteps } from "../utils/executeSteps";
+import { isEvent } from "../types";
 
 const flowRouter = Router();
 

@@ -1,6 +1,6 @@
-import type { Steps, Event } from "../types.ts";
-import executors from "../executors/index.ts";
-import { summariseResults } from "./summariseResults.ts";
+import type { Steps, Event } from "../types";
+import executors from "../executors";
+import { summariseResults } from "./summariseResults";
 
 export const executeSteps = (
   steps: Steps,
@@ -36,7 +36,7 @@ export const executeSteps = (
         // In case of an error executing an action, we stop all exectuion flow,
         // assuming actions are conditional on the success of preceding actions.
         // Different error handling flows can be introduced here in the future.
-        reject(summariseResults(completed, e.message, action));
+        reject(summariseResults(completed, String(e), action));
       }
 
       // If the first step has been executed successfully, we make a recursive call
